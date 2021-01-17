@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <!-- DetailsViewModel data binding. Contains all the logic that creates a Shoe and checks if all the
+    information has been complete before saving.
+     -->
+    <data>
+        <variable
+            name="detailsViewModel"
+            type="com.udacity.shoestore.details.DetailsViewModel" />
+    </data>
+
+    <!-- The fragment layout uses a ConstraintLayout since the details layout needs to adapt to various
+    screen sizes and vertical/horizontal orientation (keeping the correct margins and padding).
+     -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".details.DetailsFragment">
+
+        <EditText
+            android:id="@+id/shoe_name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/enter_shoe_name"
+            android:inputType="text"
+            android:text="@={detailsViewModel.shoeName}"
+            app:layout_constraintBottom_toTopOf="@+id/company_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shoe_name_text_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/shoe_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/shoe_name"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoe_name_edit_text"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/company_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/company"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/company_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/shoe_name_text_view"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/company_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/enter_company"
+            android:inputType="text"
+            android:text="@={detailsViewModel.company}"
+            app:layout_constraintBottom_toTopOf="@+id/shoe_size_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/company_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name_edit_text" />
+
+        <EditText
+            android:id="@+id/shoe_size_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/enter_shoe_size"
+            android:inputType="numberDecimal"
+            android:text="@={detailsViewModel.shoeSize}"
+            app:layout_constraintBottom_toTopOf="@+id/description_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shoe_size_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/company_edit_text"
+            app:layout_constraintVertical_bias="0.082"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:id="@+id/shoe_size_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/shoe_size"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/shoe_size_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/company_text_view"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/description_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/enter_description"
+            android:inputType="text"
+            android:text="@={detailsViewModel.description}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/shoe_size_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size_edit_text"
+            app:layout_constraintVertical_bias="0.36" />
+
+        <TextView
+            android:id="@+id/description_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/description"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/description_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/company_text_view"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/description_edit_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

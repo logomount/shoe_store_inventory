@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="login">LOGIN</string>
+    <string name="create_login">CREATE  NEW ACCOUNT</string>
+    <string name="fragment_login">Login</string>
+    <string name="fragment_welcome">Welcome</string>
+    <string name="welcome_title">Welcome to Shoe Store!</string>
+    <string name="welcome_details">We hope you enjoy our application. To insure the best experience, please, press the button below to read the instructions.</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="enter_shoe_name">Enter Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="enter_company">Enter Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="enter_shoe_size">Enter Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_details">"In this application you can store various shoes. "</string>
+    <string name="shoe_list">Open Shoe Store</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="fragment_instructions">Insturctions</string>
+    <string name="fragment_listing">Shoe Store</string>
+    <string name="fragment_details">Details</string>
+    <string name="save">Save</string>
+    <string name="logout">Logout</string>
+</resources>
